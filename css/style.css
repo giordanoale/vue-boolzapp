@@ -200,7 +200,36 @@ body {
 /* /sezione contatto */
 
 /* corpo messaggi  */
+.baloons {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+.message {
+    font-size: 14px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 40%;
+}
 
+.sent {
+    background-color: #D5F9BA;
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+.received {
+    background-color: #ffffff;
+    margin-right: auto;
+    margin-left:10%;
+}
+
+.date{
+    color: #B1B1B1;
+    font-size: 8px;
+    padding-left: 70%;
+}
 /* /corpo messaggi */
 
 /* input messaggio */
