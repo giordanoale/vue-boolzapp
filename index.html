@@ -72,9 +72,9 @@
 
                     <!-- lista contatti -->
                     <div class="contact-list">
-                        <div class="contact">
-                            <img class="contact-avatar" src="img/avatar_1.jpg" alt="">
-                            <p class="contact-name">Michele</p>
+                        <div v-for="(item, index) in contacts" class="contact">
+                            <img class="contact-avatar" v-bind:src="contacts[index].avatar" alt="contact avatar">
+                            <p class="contact-name">{{ contacts[index].name }}</p>
                         </div>
                     </div>
                     <!-- /lista contatti -->
