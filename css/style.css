@@ -100,6 +100,28 @@ body {
 }
 /* /sezione notifiche */
 
+/* sezione ricerca */
+.search {
+    background-color: #F3EEEA;
+}
+
+.search-container {
+    display: flex;
+    padding: 5px;
+}
+
+.lens {
+    background-color: #FFFFFF;
+    padding: 8px 20px;
+    color: #B1B1B1;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 5px;
+}
+/* /sezione ricerca */
 
 /* /contatti */
 
