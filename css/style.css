@@ -156,4 +156,46 @@ body {
     height: 100%;
     background-color: green;
 }
+
+/* sezione contatto */
+.message-header {
+    width: 100%;
+    background-color: #EAEAEA;
+    border-left: 1px solid #B1B1B1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-avatar {
+    display: flex;
+    align-items: center;
+}
+
+.message-avatar img{
+    padding: 5px 10px;
+    height: 50px;
+    border-radius: 50%;
+
+}
+
+.message-avatar p{
+    font-size: 14px;
+}
+
+.message-avatar span{
+    font-size: 12px;
+    color: #B1B1B1;
+}
+
+.message-icons {
+    margin-right: 15px;
+}
+
+.message-icons i {
+    color: #B1B1B1;
+    padding: 0 5px;
+} 
+/* /sezione contatto */
+
 /* /messaggi */
