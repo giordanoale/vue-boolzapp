@@ -154,7 +154,8 @@ body {
 .messages {
     width: 65%;
     height: 100%;
-    background-color: green;
+    background-image: url(../img/mine.jpg);
+    position: relative;
 }
 
 /* sezione contatto */
@@ -197,5 +198,33 @@ body {
     padding: 0 5px;
 } 
 /* /sezione contatto */
+
+/* corpo messaggi  */
+
+/* /corpo messaggi */
+
+/* input messaggio */
+.message-input{
+    width: 100%;
+    background-color: #F3EEEA;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+
+.message-input i {
+    color: #6B7376;
+    margin: 16px 30px;
+    font-size: 20px;
+}
+
+.message-input input {
+    width: 100%;
+    border: none;
+    padding-left: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+/* /input messaggio */
 
 /* /messaggi */
