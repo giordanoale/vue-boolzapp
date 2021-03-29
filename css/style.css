@@ -1,3 +1,4 @@
+/* general */
 * {
     padding: 0;
     margin: 0;
@@ -7,7 +8,9 @@
 body { 
     font-family: 'Lato', sans-serif;
 }
+/* /general */
 
+/* finestra principale */
 #root {
     height: 100vh;
     width: 100vw;
@@ -22,5 +25,55 @@ body {
     top: 50%;
     left: 50%;
     transform: translate( -50%, -50%);
-    background-color: beige;
+    display: flex;
 }
+/* /finestra principale */
+
+/* contatti */
+.contacts{
+    width: 35%;
+    height: 100%;
+    background-color: pink;
+}
+
+.me {
+    background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar-name{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.avatar-name img {
+    height: 50px;
+    padding: 3px 0;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.avatar-name p {
+    font-size: 14px;
+}
+
+.avatar-icons {
+    padding-right: 15px;
+}
+
+.avatar-icons i {
+    color: #B1B1B1;
+    margin: 0 5px;
+}
+/* /contatti */
+
+/* messaggi */
+.messages {
+    width: 65%;
+    height: 100%;
+    background-color: green;
+}
+/* /messaggi */
