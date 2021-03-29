@@ -33,7 +33,7 @@ body {
 .contacts{
     width: 35%;
     height: 100%;
-    background-color: pink;
+    background-color: #FFFFFF;
 }
 
 /* sezione personale */
@@ -122,6 +122,31 @@ body {
     padding: 5px;
 }
 /* /sezione ricerca */
+
+/* lista contatti */
+.contact {
+    display: flex;
+    padding: 5px 15px;
+    border-bottom: 1px solid #E9EBEB;
+}
+
+.contact:hover {
+    background-color: #E9EBEB;
+}
+
+.contact-avatar {
+    height: 50px;
+    padding: 3px 0;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.contact-name {
+    margin-top: 6px;
+    margin-left: 5px;
+    font-size: 14px;
+}
+/* /lista contatti */
 
 /* /contatti */
 
