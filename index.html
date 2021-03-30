@@ -72,7 +72,7 @@
 
                     <!-- lista contatti -->
                     <div class="contact-list">
-                        <div v-for="(item, index) in contacts" class="contact">
+                        <div  v-for="(item, index) in contacts" @click="contactActive = index" :class=" contactActive == index ? 'active' : '' " class="contact">
                             <img class="contact-avatar" v-bind:src="contacts[index].avatar" alt="contact avatar">
                             <p class="contact-name">{{ contacts[index].name }}</p>
                         </div>
@@ -88,9 +88,9 @@
                     <!-- sezione contatto -->
                     <div class="message-header">
                         <div class="message-avatar">
-                            <img src="img/avatar_1.jpg" alt="avatar">
+                            <img :src="contacts[contactActive].avatar" alt="avatar">
                             <div>
-                                <p>Michele</p>
+                                <p>{{ contacts[contactActive].name }}</p>
                                 <span>Ultimo accesso oggi alle</span>
                             </div>
                         </div>
@@ -104,18 +104,18 @@
 
                     <!-- corpo messaggi -->
                     <div class="baloons">
-                        <div class="message sent">
-                            <p>Hai portato a spasso il cane?</p>
-                            <span class="date">10/01/2020 15:30:55</span>
+                        <div v-for="(item, index) in contacts[contactActive].messages" class="message" :class="item.status">
+                            <p>{{ item.message}}</p>
+                            <span class="date">{{ item.date }}</span>
                         </div>
-                        <div class="message sent">
+                        <!-- <div class="message sent">
                             <p>Ricordati di dargli da mangiare</p>
                             <span class="date">10/01/2020 15:50:00</span>
                         </div>
                         <div class="message received">
                             <p>Tutto fatto!</p>
                             <span class="date">10/01/2020 16:15:22</span>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- /corpo messaggi -->
 

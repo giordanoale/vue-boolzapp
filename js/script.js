@@ -1,6 +1,7 @@
 var app = new Vue({
     el: "#root",
     data: {
+        contactActive: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -66,8 +67,8 @@ var app = new Vue({
                 ],
             },
             {
-                name: 'Luisa',
-                avatar: 'img/avatar_6.jpg',
+                name: 'Anna',
+                avatar: 'img/avatar_9.jpg',
                 visible: true,
                 messages: [{
                     date: '10/01/2020 15:30:55',
@@ -83,5 +84,8 @@ var app = new Vue({
             },
         ]
         
+    },
+    methods: {
+
     }
 });
