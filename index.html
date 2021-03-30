@@ -8,6 +8,10 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <!-- /vuejs -->
 
+        <!-- dayjs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js" integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg==" crossorigin="anonymous"></script>
+        <!-- /dayjs -->
+
         <!-- fontawesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
         <!-- /fontawesome -->
@@ -108,21 +112,13 @@
                             <p>{{ item.message}}</p>
                             <span class="date">{{ item.date }}</span>
                         </div>
-                        <!-- <div class="message sent">
-                            <p>Ricordati di dargli da mangiare</p>
-                            <span class="date">10/01/2020 15:50:00</span>
-                        </div>
-                        <div class="message received">
-                            <p>Tutto fatto!</p>
-                            <span class="date">10/01/2020 16:15:22</span>
-                        </div> -->
                     </div>
                     <!-- /corpo messaggi -->
 
                     <!-- input messaggio -->
                     <div class="message-input">
                         <i class="far fa-smile"></i>
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keydown.13="addMessage">
                         <i class="fas fa-microphone"></i>
                     </div>
                     <!-- /input messaggio -->
