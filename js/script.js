@@ -88,20 +88,26 @@ var app = new Vue({
     },
     methods: {
         addMessage: function(){
-
             if (this.newMessage != ""){
                 var now = dayjs();
-                dayjs().format('DD/MM/YYYY HH:mm:ss'); 
                 var objMessage = {};
                 objMessage.date = dayjs().format('DD/MM/YYYY HH:mm:ss');
                 objMessage.message = this.newMessage;
                 objMessage.status = 'sent';
-                // this.contacts[this.contactActive].messages.message = this.newMessage;
                 this.contacts[this.contactActive].messages.push(objMessage);
                 this.newMessage = "";
+                setTimeout(this.answer, 1000);
+                
             }
         },
-            
+        answer: function(){
+            var now = dayjs();
+            var ansMessage = {};
+            ansMessage.date = dayjs().format('DD/MM/YYYY HH:mm:ss');
+            ansMessage.message = 'Ok';
+            ansMessage.status = 'received';
+            this.contacts[this.contactActive].messages.push(ansMessage);
+        }
     }
     
 });
