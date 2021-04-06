@@ -109,12 +109,14 @@ var app = new Vue({
             this.contacts[this.contactActive].messages.push(ansMessage);
         },
         searchContact: function(){
-            // console.log(this.contacts.length);
             for (var i = 0; i < this.contacts.length; i++) {
-                // console.log(this.contacts[i].name);
-                if (this.contacts[i].name.includes(this.newSearch)) {
-                    console.log("trovato");
-                } 
+                let smallSearch = this.newSearch.toLowerCase();
+                let smallName = this.contacts[i].name.toLowerCase();
+                if (smallName.includes(smallSearch)) {
+                    this.contacts[i].visible = true;
+                } else {
+                    this.contacts[i].visible = false;
+                }
             }
         }
     }
