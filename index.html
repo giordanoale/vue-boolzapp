@@ -69,14 +69,15 @@
                             <div class="lens">
                                 <i class="fas fa-search"></i>
                             </div>
-                            <input class="input-text" type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input class="input-text" type="text" placeholder="Cerca o inizia una nuova chat" v-model="newSearch" @keydown.13="searchContact">
                         </div>
                     </div>
                     <!-- /sezione ricerca -->
 
                     <!-- lista contatti -->
                     <div class="contact-list">
-                        <div  v-for="(item, index) in contacts" @click="contactActive = index" :class=" contactActive == index ? 'active' : '' " class="contact">
+                        <div  v-for="(item, index) in contacts" @click="contactActive = index" :class=" contactActive == index ? 'active' : '' " 
+                        class="contact" v-if="contacts[index].name.includes(newSearch)">
                             <img class="contact-avatar" v-bind:src="contacts[index].avatar" alt="contact avatar">
                             <p class="contact-name">{{ contacts[index].name }}</p>
                         </div>
@@ -109,7 +110,7 @@
                     <!-- corpo messaggi -->
                     <div class="baloons">
                         <div v-for="(item, index) in contacts[contactActive].messages" class="message" :class="item.status">
-                            <p>{{ item.message}}</p>
+                            <p>{{ item.message }}</p>
                             <span class="date">{{ item.date }}</span>
                         </div>
                     </div>

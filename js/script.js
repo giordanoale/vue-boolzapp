@@ -1,6 +1,7 @@
 var app = new Vue({
     el: "#root",
     data: {
+        newSearch: "",
         newMessage: "",
         contactActive: 0,
         contacts: [
@@ -97,7 +98,6 @@ var app = new Vue({
                 this.contacts[this.contactActive].messages.push(objMessage);
                 this.newMessage = "";
                 setTimeout(this.answer, 1000);
-                
             }
         },
         answer: function(){
@@ -107,6 +107,15 @@ var app = new Vue({
             ansMessage.message = 'Ok';
             ansMessage.status = 'received';
             this.contacts[this.contactActive].messages.push(ansMessage);
+        },
+        searchContact: function(){
+            // console.log(this.contacts.length);
+            for (var i = 0; i < this.contacts.length; i++) {
+                // console.log(this.contacts[i].name);
+                if (this.contacts[i].name.includes(this.newSearch)) {
+                    console.log("trovato");
+                } 
+            }
         }
     }
     
