@@ -77,9 +77,9 @@
                     <!-- lista contatti -->
                     <div class="contact-list">
                         <div  v-for="(item, index) in contacts" @click="contactActive = index" :class=" contactActive == index ? 'active' : '' " 
-                        class="contact" v-if="contacts[index].visible == true">
-                            <img class="contact-avatar" v-bind:src="contacts[index].avatar" alt="contact avatar">
-                            <p class="contact-name">{{ contacts[index].name }}</p>
+                        class="contact" v-if="item.visible == true">
+                            <img class="contact-avatar" v-bind:src="item.avatar" alt="contact avatar">
+                            <p class="contact-name">{{ item.name }}</p>
                         </div>
                     </div>
                     <!-- /lista contatti -->
